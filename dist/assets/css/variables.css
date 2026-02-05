@@ -1,21 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Playwrite+IN+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Playwrite+IN:wght@100..400&display=swap');
 
-.playwrite-in-guides-regular {
-  font-family: 'Playwrite IN Guides', cursive;
-  font-weight: 400;
-  font-style: normal;
+.playwrite-in {
+  font-family: 'Playwrite IN', cursive;
 }
 
 .playpen-sans {
   font-family: 'Playpen Sans', cursive;
   font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
 }
 
 :root {
   --color-one: #365a79;
   --color-two: #95c59f;
-  --font-one: 'Playwrite IN Guides';
+  --color-three: #57493A;
+  --font-one: 'Playwrite IN';
   --font-two: 'Playpen Sans';
 }

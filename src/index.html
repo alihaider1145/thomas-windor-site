@@ -5,23 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/variables.css" />
     <script src="assets/js/index.js" defer></script>
     <title>Thomas Windsor Portfolio</title>
   </head>
   <body>
     <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/gallery/">Gallery</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact Us</a>
+      <nav class="nav">
+        <div class="nav-container">
+          <a href="/">Home</a>
+          <a href="/gallery/">Gallery</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact Us</a>
+        </div>
       </nav>
     </header>
 
     <main>
-      <h1>Thomas Windsor</h1>
-      <p>Hello World</p>
+      <section class="hero">
+        <div class="hero-container">
+          <img class="hero-image" src="./assets/images/painting-therapy-hero-pic.jpg" alt="Painting Therapy">
+          <h1 class="hero-title">Thomas Windsor</h1>
+          <p class="hero-text">Artist | Painting Therapy</p>
+        </div>
+      </section>
+
+      <section class="painting-therapy">
+        <div class="painting-therapy-container">
+          <h2 class="painting-therapy-title">Painting Therapy</h2>
+          <p class="painting-therapy-text"><span class="highlighted-text">Painting</span> can be theurapeutic to watch. <br> Join artist <span class="highlighted-text">Thomas Windsor</span> as he shares his emotions and celebrates nature.</p>
+          <h3 class="latest-episode-title">Latest Episode</h3>
+          <div class="latest-episode-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/k1onUZNmCxI?si=ZIEObV_ABPPcrSpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <button class="youtube-channel-btn">
+            Check out more!
+          </button>
+        </div>
+      </section>
+
+      <section class="featured-art">
+        <h2 class="featured-art-title">From the Studio</h2>
+        <div class="featured-art-container">
+          <div class="featured-art-one">
+            <img class="featured-art-img" src="./assets/images/featured-art-one.png" alt="Featured Art 1">
+            <p class="featured-art-title">Mountain (Sunlight and Shadows)</p>
+            <p class="featured-art-price">$100</p>
+            <button class="featured-art-btn">More</button>
+          </div>
+
+          <div class="featured-art-two">
+            <img class="featured-art-img" src="./assets/images/featured-art-two.png" alt="Featured Art 2">
+            <p class="featured-art-title">Trust the process</p>
+            <p class="featured-art-price">$100</p>
+            <button class="featured-art-btn">More</button>
+          </div>
+
+          <div class="featured-art-three">
+            <img class="featured-art-img" src="./assets/images/featured-art-three.png" alt="Featured Art 3">
+            <p class="featured-art-title">Bright Snowy Mountain</p>
+            <p class="featured-art-price">$100</p>
+            <button class="featured-art-btn">More</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>

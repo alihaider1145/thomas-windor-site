@@ -1,25 +1,21 @@
-Playpen Sans Variable Font
+Playwrite IN Variable Font
 ==========================
 
-This download contains Playpen Sans as both a variable font and static fonts.
+This download contains Playwrite IN as both a variable font and static fonts.
 
-Playpen Sans is a variable font with this axis:
+Playwrite IN is a variable font with this axis:
   wght
 
 This means all the styles are contained in a single file:
-  PlaypenSans-VariableFont_wght.ttf
+  PlaywriteIN-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Playpen Sans:
-  static/PlaypenSans-Thin.ttf
-  static/PlaypenSans-ExtraLight.ttf
-  static/PlaypenSans-Light.ttf
-  static/PlaypenSans-Regular.ttf
-  static/PlaypenSans-Medium.ttf
-  static/PlaypenSans-SemiBold.ttf
-  static/PlaypenSans-Bold.ttf
-  static/PlaypenSans-ExtraBold.ttf
+in those cases you can use the static font files for Playwrite IN:
+  static/PlaywriteIN-Thin.ttf
+  static/PlaywriteIN-ExtraLight.ttf
+  static/PlaywriteIN-Light.ttf
+  static/PlaywriteIN-Regular.ttf
 
 Get started
 -----------
