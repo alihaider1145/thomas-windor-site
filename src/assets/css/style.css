@@ -7,7 +7,11 @@ p {
 
 a {
   font-weight: 900;
-  color: var(--color-one);
+  color: var(--color-white);
+}
+
+a::after {
+  filter: invert(1);
 }
 
 h1,
@@ -16,11 +20,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-one);
+  font-family: var(--font-three);
 }
 
 .heading {
   padding: 2rem;
+  font-family: var(--font-three);
+  color: var(--color-one);
 }
 
 .highlighted-text {
@@ -39,7 +45,6 @@ h6 {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  filter: invert(1);
 }
 
 h1 {
@@ -62,25 +67,29 @@ h6 {
 }
 
 button {
-  padding: 1rem;
+  padding: 1rem 3rem;
   border-radius: 1rem;
   border: none;
-  background-color: var(--color-three);
-  color: #ffffff;
+  background-color: var(--color-two);
+  color: #111111;
+  font-weight: 900;
   font-size: 2rem;
   margin: 2rem;
 }
 
 .section {
-  margin-inline: 4rem;
-  margin-block: 8rem;
-}
-
-.container {
-  padding-block: 2rem;
+  padding: 4rem;
 }
 
 /* header */
+header {
+  background-color: var(--color-three);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-around;
@@ -89,20 +98,23 @@ button {
 }
 
 /* hero */
-.hero {
-  background-image: url('../images/canvas-background.jpg');
-  background-repeat: repeat;
-  background-size: contain;
-  border: 1rem solid #282828;
-}
-
 .hero-container {
   display: grid;
   grid-template-rows: 1fr, 2fr;
   grid-template-columns: 1fr, 2fr;
-
   padding-inline: 2rem;
   padding-block: 8rem;
+
+  position: relative;
+  border-left: 15px solid #2a2a2a; /* dark frame color */
+  border-bottom: 15px solid #1a1a1a;
+  border-right: 5px solid #1a1a1a;
+  border-top: 5px solid #2a2a2a;
+
+  background-image: url('../images/canvas-background.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .hero-image {
@@ -123,21 +135,71 @@ button {
   display: flex;
   justify-content: center;
   align-items: end;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  filter: contrast(1.1) saturate(1.2);
+
+  background: linear-gradient(var(--color-blue), #2a4a5a);
+
+  font-size: 10rem;
+  background: url(../images/sky-strokes.jpg);
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-text {
   grid-row: 2/3;
   grid-column: 2/3;
+  text-shadow:
+    1px 1px 2px rgba(255, 255, 255, 0.8),
+    -1px -1px 2px rgba(255, 255, 255, 0.8);
 
   font-size: 2.5rem;
 }
 
-/* painting-therapy */
-.painting-therapy {
-  background-color: var(--color-three);
-  color: var(--color-white);
+.frame-border {
+  position: relative;
+  grid-row: 3/4;
+  grid-column: 2/3;
 }
 
+.frame-border::after {
+  content: '';
+  position: absolute;
+  bottom: -95px;
+  right: -25px;
+  width: 0;
+  height: 0;
+  border-right: 20px solid #ffffff;
+  border-top: 20px solid transparent;
+}
+
+.hero-container::before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #1a1a1a; /* slightly darker for depth */
+}
+
+.hero-container::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #ffffff;
+  border-bottom: 20px solid transparent;
+}
+
+/* painting-therapy */
 .video-container {
   width: 50vw;
   aspect-ratio: 16 / 9; /* modern CSS, much cleaner */
@@ -153,9 +215,24 @@ button {
   height: 100%;
 }
 
+.painting-therapy-heading {
+  line-height: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+.painting-therapy-heading span {
+  font-weight: 100;
+  font-size: 1.6rem;
+  letter-spacing: 0.7rem;
+}
+
+.latest-episode-title {
+  padding: 2rem;
+}
+
 /* featured art */
 .featured-art {
-  margin-inline: 0;
+  padding-inline: 0;
 }
 
 .featured-art-container {
@@ -167,38 +244,78 @@ button {
 }
 
 div.featured-art-one div.featured-art-info {
-  background: #513333;
+  background: linear-gradient(
+    to top,
+    #3a3d2c 0%,
+    #3a3d2c 70%,
+    transparent 100%
+  );
   opacity: 0.8;
 }
 
 .featured-art-two .featured-art-info {
-  background: #2d3e45;
+  background: linear-gradient(
+    to top,
+    #2d3e45 0%,
+    #2d3e45 70%,
+    transparent 100%
+  );
   opacity: 0.8;
 }
 
 .featured-art-three .featured-art-info {
-  background: #51203b;
+  background: linear-gradient(
+    to top,
+    #51203b 0%,
+    #51203b 70%,
+    transparent 100%
+  );
   opacity: 0.8;
 }
 
 .featured-art-four .featured-art-info {
-  background: #3d2d42;
+  background: linear-gradient(
+    to top,
+    #3d2d42 0%,
+    #3d2d42 70%,
+    transparent 100%
+  );
   opacity: 0.8;
 }
 
 .featured-art-five .featured-art-info {
-  background: #32504f;
+  background: linear-gradient(
+    to top,
+    #32504f 0%,
+    #32504f 70%,
+    transparent 100%
+  );
   opacity: 0.8;
 }
 
 .featured-art-six .featured-art-info {
-  background: #3a3d2c;
+  background: linear-gradient(
+    to top,
+    #3a3d2c 0%,
+    #3a3d2c 70%,
+    transparent 100%
+  );
   opacity: 0.8;
+}
+
+.featured-art-info {
+  transform: translateY(-3.5rem);
+  margin-bottom: -3.5rem;
+  padding-top: 4rem;
 }
 
 .featured-art-title,
 .featured-art-price {
   color: #ffffff;
+}
+
+.featured-art-title {
+  font-family: var(--font-one);
 }
 
 .featured-art-img {
@@ -223,10 +340,13 @@ div.featured-art-container > * {
 }
 
 .card {
-  background-color: #f2f0f2ef;
+  background-color: var(--color-two);
   width: 20vw;
   height: 35rem;
-  padding: 2rem;
+  padding: 3rem;
+  font-weight: normal;
+  color: #ffffff;
+  border-radius: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -243,10 +363,24 @@ div.featured-art-container > * {
 
 .card-img {
   width: 80%;
+  filter: invert(100%);
+}
+
+/* f. a. q. */
+.faq-question {
+  padding: 2rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 /* social */
 .social-img {
   width: 5rem;
   height: 5rem;
+}
+
+/* footer */
+footer {
+  background-color: var(--color-three);
+  color: var(--color-white);
+  padding: 2rem;
 }
