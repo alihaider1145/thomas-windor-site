@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'FS Albert ExtraBold';
+  src: url('../../assets/fonts/FSAlbert ExtraBold/FSAlbert ExtraBold.otf')
+    format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mundo Sans Regular';
+  src: url('../../assets/fonts/Mundo\ Sans\ Std\ Regular/Mundo Sans Std Regular.otf')
+    format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-one: #365a79;
+  --color-two: #95c59f;
+  --color-three: #0c1d27;
+  --color-white: #fefffb;
+  --font-one: 'FS Albert ExtraBold';
+  --font-two: 'Mundo Sans Regular';
+  --font-three: 'Times New Roman';
+}

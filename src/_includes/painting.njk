@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+
+<div class="painting-page">
+    <a href="/gallery/" class="back-link">← Back to Gallery</a>
+    
+    <div class="painting-container">
+        <div class="painting-image">
+            <img src="{{ image }}" alt="{{ title }}">
+        </div>
+        
+        <div class="painting-info">
+            <h1>{{ title }}</h1>
+            
+            <div class="painting-details">
+                <p class="price">${{ price }}</p>
+                <p class="size">{{ size }}</p>
+                <p class="medium">{{ medium }}</p>
+                <span class="availability {{ availability | lower }}">{{ availability }}</span>
+            </div>
+            
+            <div class="description">
+                <p>{{ description }}</p>
+            </div>
+            
+            <div class="painting-actions">
+                {% if availability == "Available" %}
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                {% endif %}
+                <a href="/contact/" class="btn btn-secondary">Contact for Details</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,10 +1,17 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
+  // Copy assets folder to output
+  eleventyConfig.addPassthroughCopy('src/assets');
+
+  // Create paintings collection
+  eleventyConfig.addCollection('paintings', function (collectionApi) {
+    return collectionApi.getFilteredByGlob('src/assets/paintings/*.md');
+  });
 
   return {
     dir: {
       input: 'src',
-      output: 'dist',
+      output: '_site',
+      includes: '_includes',
     },
   };
 };
