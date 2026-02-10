@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Contact
+---
+
+<div class="contact">
+    <h1 class="heading">Contact Us</h1>
+
+    <div class="contact-container">
+        <form action="https://formspree.io/f/{form_id}" method="post">
+            <label>
+                Your Email
+                <input name="Email" id="email" type="email">
+            </label>
+            
+            <label for="message">
+                Message
+                <textarea name="Message from your site" placeholder="Enter your message"></textarea>
+            </label>
+            <button type="submit" class="btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

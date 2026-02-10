@@ -7,20 +7,24 @@ title: Gallery
     <h1>From the Studio</h1>
     <p class="gallery-intro">Explore the collection of therapeutic landscape paintings. Each piece is an original oil painting created with mindfulness and care.</p>
     
-    <div class="paintings-grid">
+    <div class="painting-grid container">
         {% for painting in collections.paintings %}
-        <div class="painting-card">
-            <a href="{{ painting.url }}">
-                <img src="{{ painting.data.image }}" alt="{{ painting.data.title }}">
-                <div class="painting-card-info">
-                    <h3>{{ painting.data.title }}</h3>
-                    <p class="painting-price">${{ painting.data.price }}</p>
-                    <span class="availability-badge {% if painting.data.availability == 'Available' %}available{% else %}sold{% endif %}">
-                        {{ painting.data.availability }}
-                    </span>
-                </div>
-            </a>
+        <div class="painting-card-{{ loop.index }}">
+            <img
+            class="painting-img"
+            src="{{ painting.data.image }}"
+            alt="{{ painting.data.title }}"
+            />
+            <div class="painting-card-info">
+                <h3 class="painting-title">{{ painting.data.title }}</h3>
+                <p class="painting-price">${{ painting.data.price }}</p>
+                <span class="availability-badge {% if painting.data.availability == 'Available' %}available{% else %}sold{% endif %}">
+                    {{ painting.data.availability }}
+                </span>
+            </div>
+            <button href="{{ painting.url }}" class="featured-art-btn btn-secondary">View Details</button>
         </div>
         {% endfor %}
     </div>
+    <button class="btn-primary">View More</button>
 </div>

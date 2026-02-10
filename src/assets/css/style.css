@@ -225,10 +225,10 @@ header {
 }
 
 /* painting-therapy */
-.video-container {
+.latest-episode-container {
   width: 50vw;
-  aspect-ratio: 16 / 9; /* modern CSS, much cleaner */
-  margin: 0 auto; /* centers it */
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -256,19 +256,16 @@ header {
 }
 
 /* featured art */
-.featured-art {
-  padding-inline: 0;
-}
 
-.featured-art-container {
+.painting-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-
-  width: 100vw;
+  grid-template-columns: repeat(2, minmax(30rem, 30vw));
+  justify-content: center;
+  width: 100%;
+  column-gap: 10vw;
 }
 
-div.featured-art-one div.featured-art-info {
+.painting-card-1 > .painting-card-info {
   background: linear-gradient(
     to top,
     #3a3d2c 0%,
@@ -278,7 +275,7 @@ div.featured-art-one div.featured-art-info {
   opacity: 0.8;
 }
 
-.featured-art-two .featured-art-info {
+.painting-card-2 > .painting-card-info {
   background: linear-gradient(
     to top,
     #2d3e45 0%,
@@ -288,7 +285,7 @@ div.featured-art-one div.featured-art-info {
   opacity: 0.8;
 }
 
-.featured-art-three .featured-art-info {
+.painting-card-3 > .painting-card-info {
   background: linear-gradient(
     to top,
     #51203b 0%,
@@ -298,7 +295,7 @@ div.featured-art-one div.featured-art-info {
   opacity: 0.8;
 }
 
-.featured-art-four .featured-art-info {
+.painting-card-4 > .painting-card-info {
   background: linear-gradient(
     to top,
     #3d2d42 0%,
@@ -308,51 +305,34 @@ div.featured-art-one div.featured-art-info {
   opacity: 0.8;
 }
 
-.featured-art-five .featured-art-info {
-  background: linear-gradient(
-    to top,
-    #32504f 0%,
-    #32504f 70%,
-    transparent 100%
-  );
-  opacity: 0.8;
-}
+/* #32504f */
+/* #3a3d2c */
 
-.featured-art-six .featured-art-info {
-  background: linear-gradient(
-    to top,
-    #3a3d2c 0%,
-    #3a3d2c 70%,
-    transparent 100%
-  );
-  opacity: 0.8;
-}
-
-.featured-art-info {
+.painting-card-info {
   transform: translateY(-3.5rem);
   margin-bottom: -3.5rem;
   padding-top: 4rem;
 }
 
-.featured-art-title,
-.featured-art-price {
+.painting-title,
+.painting-price,
+.availability-badge {
   color: #ffffff;
 }
 
-.featured-art-title {
+.painting-title {
   font-family: var(--font-one);
 }
 
-.featured-art-img {
+.painting-img {
   width: 100%;
   aspect-ratio: 9 / 10;
   object-fit: cover;
 }
 
-div.featured-art-container > * {
+div.painting-grid > * {
   display: flex;
   flex-direction: column;
-  flex: 1 1 30rem;
   margin: 2rem;
 }
 
@@ -460,92 +440,87 @@ footer {
 }
 
 /* Gallery Page */
-.gallery-page {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-}
 
-.gallery-page h1 {
-  text-align: center;
-  color: var(--color-blue);
-  margin-bottom: 1rem;
-}
-
-.gallery-intro {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  color: #666;
-  line-height: 1.6;
-}
-
-.paintings-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* about */
+.about-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
   gap: 2rem;
-  margin-bottom: 3rem;
+  flex-direction: row;
+  padding-inline: 4rem;
 }
 
-.painting-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+.about-container h2 {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  text-align: left;
 }
 
-.painting-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+.about-container h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
 }
 
-.painting-card a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+.about-container p {
+  text-align: left;
+  padding-block: 1rem;
 }
 
-.painting-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
+.about-text {
+  width: 40vw;
 }
 
-.painting-card-info {
-  padding: 1.5rem;
+.about-video-container {
+  width: 30vw;
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  position: relative;
 }
 
-.painting-card-info h3 {
-  color: var(--color-blue);
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+.about-invitation {
+  max-width: 80rem;
+  margin: auto;
 }
 
-.painting-price {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--color-blue);
-  margin: 0.5rem 0;
+/* contact */
+.contact {
+  height: calc(100vh - 34rem);
 }
 
-.availability-badge {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem;
 }
 
-.availability-badge.available {
-  background: var(--color-green);
-  color: white;
+label {
+  font-size: 2.6rem;
+  font-weight: 700;
+  width: 80rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.availability-badge.sold {
-  background: #999;
-  color: white;
+input,
+textarea {
+  min-height: 3rem;
+  font-size: 1.8rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+
+form button {
+  width: fit-content;
+  flex: 0;
 }
