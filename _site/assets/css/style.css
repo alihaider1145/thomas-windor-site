@@ -213,7 +213,7 @@ header {
   column-gap: 10vw;
 }
 
-.painting-card:nth-child(4n+1) > .painting-card-info {
+.painting-card:nth-child(4n + 1) > .painting-card-info {
   background: linear-gradient(
     to top,
     #3a3d2c 0%,
@@ -223,7 +223,7 @@ header {
   opacity: 0.8;
 }
 
-.painting-card:nth-child(4n+2) > .painting-card-info {
+.painting-card:nth-child(4n + 2) > .painting-card-info {
   background: linear-gradient(
     to top,
     #2d3e45 0%,
@@ -233,7 +233,7 @@ header {
   opacity: 0.8;
 }
 
-.painting-card:nth-child(4n+3) > .painting-card-info {
+.painting-card:nth-child(4n + 3) > .painting-card-info {
   background: linear-gradient(
     to top,
     #51203b 0%,
@@ -243,7 +243,7 @@ header {
   opacity: 0.8;
 }
 
-.painting-card:nth-child(4n+4) > .painting-card-info {
+.painting-card:nth-child(4n + 4) > .painting-card-info {
   background: linear-gradient(
     to top,
     #3d2d42 0%,

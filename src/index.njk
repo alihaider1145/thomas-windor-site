@@ -63,21 +63,23 @@ isHomepage: true
 <section class="featured-art section">
   <h2 class="featured-art-heading heading">From the Studio</h2>
   <div class="painting-grid container">
-    {% for painting in collection.paintings | slice(0, 4) | reverse %}
-    <div class="painting-card">
-      <img
-        class="painting-img"
-        src="/.netlify/images?url={{ painting.data.image }}&w=600&q=80"
-        alt="{{ painting.data.title }}"
-        loading="lazy"
-      />
-      <div class="painting-card-info">
-        <h3 class="painting-title">{{ painting.data.title }}</h3>
-        <p class="painting-price">${{ painting.data.price }}</p>
+  {% for painting in collections.paintings | reverse %}
+    {% if loop.index <= 4 %}
+      <div class="painting-card">
+        <img
+          class="painting-img"
+          src="/.netlify/images?url={{ painting.data.image }}&w=600&q=80"
+          alt="{{ painting.data.title }}"
+          loading="lazy"
+        />
+        <div class="painting-card-info">
+          <h3 class="painting-title">{{ painting.data.title }}</h3>
+          <p class="painting-price">${{ painting.data.price }}</p>
+        </div>
+        <a href="{{ painting.url }}" class="featured-art-btn btn-secondary">View Details</a>
       </div>
-      <a href="{{ painting.url }}" class="featured-art-btn btn-secondary">View Details</a>
-    </div>
-    {% endfor %}
+    {% endif %}
+  {% endfor %}
   </div>
   <a href="../gallery/" class="btn-primary">View More</a>
 </section>
