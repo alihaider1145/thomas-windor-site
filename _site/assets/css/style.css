@@ -130,12 +130,6 @@ header {
   padding-inline: 2rem;
   padding-block: 8rem;
 
-  position: relative;
-  border-left: 15px solid #2a2a2a; /* dark frame color */
-  border-bottom: 15px solid #1a1a1a;
-  border-right: 5px solid #1a1a1a;
-  border-top: 5px solid #2a2a2a;
-
   background-image: url('../images/canvas-background.jpg');
   background-repeat: repeat;
   background-size: contain;
@@ -147,7 +141,7 @@ header {
   height: 25vw;
   border-radius: 50%;
   margin: auto;
-  border: 2rem solid #ffffff;
+  border: 2vw solid #ffffff;
 
   grid-row: 1/3;
   grid-column: 1/2;
@@ -181,47 +175,7 @@ header {
   text-shadow:
     1px 1px 2px rgba(255, 255, 255, 0.8),
     -1px -1px 2px rgba(255, 255, 255, 0.8);
-
   font-size: 2.5rem;
-}
-
-.frame-border {
-  position: relative;
-  grid-row: 3/4;
-  grid-column: 2/3;
-}
-
-.frame-border::after {
-  content: '';
-  position: absolute;
-  bottom: -95px;
-  right: -25px;
-  width: 0;
-  height: 0;
-  border-right: 20px solid #ffffff;
-  border-top: 20px solid transparent;
-}
-
-.hero-container::before {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: -15px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-bottom: 15px solid #1a1a1a; /* slightly darker for depth */
-}
-
-.hero-container::after {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -15px;
-  width: 0;
-  height: 0;
-  border-left: 20px solid #ffffff;
-  border-bottom: 20px solid transparent;
 }
 
 /* painting-therapy */
@@ -341,13 +295,16 @@ div.painting-grid > * {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
+  gap: 2rem;
 }
 
 .card {
   background-color: var(--color-two);
-  width: 20vw;
-  height: 35rem;
+  min-width: 20rem;
+  min-height: 20rem;
+  max-width: 35rem;
+  max-height: 35rem;
   padding: 3rem;
   font-weight: normal;
   color: #ffffff;
@@ -356,15 +313,16 @@ div.painting-grid > * {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1 1 0;
 }
 
 .card p {
   flex: 1;
 }
 
-.card h5 {
-  height: 5.5rem;
-}
+/* .card h5 {
+  height: 5.5rem; 
+}*/
 
 .card-img {
   width: 80%;
@@ -377,6 +335,9 @@ div.painting-grid > * {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
+.faq-question:last-of-type {
+  border-bottom: none;
+}
 /* social */
 .social-img {
   width: 5rem;

@@ -13,10 +13,10 @@
     <header>
       <nav class="nav">
         <div class="nav-container">
-          <a class="highlighted-text" href="/">Home</a>
-          <a class="highlighted-text" href="/gallery/">Gallery</a>
-          <a class="highlighted-text" href="/about/">About</a>
-          <a class="highlighted-text" href="/contact/">Contact Us</a>
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/gallery/">Gallery</a>
+          <a class="nav-link" href="/about/">About</a>
+          <a class="nav-link" href="/contact/">Contact Us</a>
         </div>
       </nav>
     </header>
@@ -31,7 +31,6 @@
           />
           <h1 class="hero-title">Thomas Windsor</h1>
           <p class="hero-text">Artist | Painting Therapy</p>
-          <div class="frame-border"></div>
         </div>
       </section>
 
@@ -66,9 +65,15 @@
               allowfullscreen
             ></iframe>
           </div>
-          <button class="youtube-channel-btn btn-primary">
-            Free weekly episodes on YouTube!
-          </button>
+          <a
+            href="https://www.youtube.com/@Thomas_Windsor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button class="youtube-channel-btn btn-primary">
+              Free weekly episodes on YouTube!
+            </button>
+          </a>
         </div>
       </section>
 
@@ -127,7 +132,9 @@
             <button class="featured-art-btn btn-secondary">View Details</button>
           </div>
         </div>
-        <button class="btn-primary">View More</button>
+        <a href="../gallery/">
+          <button class="btn-primary">View More</button>
+        </a>
       </section>
 
       <section class="cards section">
