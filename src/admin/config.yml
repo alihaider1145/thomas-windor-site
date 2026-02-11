@@ -8,7 +8,7 @@ public_folder: '/assets/images/paintings'
 collections:
   - name: 'paintings'
     label: 'Paintings'
-    folder: 'src/paintings'
+    folder: './src/assets/paintings/'
     create: true
     slug: '{{slug}}'
     fields:
