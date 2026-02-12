@@ -524,4 +524,8 @@ form button {
   form {
     padding: 0;
   }
+
+  .painting-container {
+    flex-direction: column;
+  }
 }

@@ -3,9 +3,9 @@ layout: base.njk
 ---
 
 <div class="painting-page">
-    <a href="/gallery/" class="back-link">← Back to Gallery</a>
-    
     <div class="painting-container">
+        <h1 class="heading">{{ title }}</h1>
+
         <div class="painting-img">
             <img 
             src="/.netlify/images?url={{ image }}&w=800&q=80" 
@@ -14,9 +14,7 @@ layout: base.njk
             >
         </div>
         
-        <div class="painting-info">
-            <h1>{{ title }}</h1>
-            
+        <div class="painting-info">            
             <div class="painting-details">
                 <p class="price"><span>Price:</span> <span>${{ price }}</span></p>
                 <p class="size"><span>Size:</span> <span class="highlighted-text">{{ size }}</span></p>
