@@ -1,10 +1,10 @@
 ---
 layout: painting.njk
-title: Snowy Scenery
-price: 200
-size: 50 x 50
+title: Calm Lake
+price: 300
+size: 20 x 60
 medium: Oil on canvas
-availability: Sold
-image: assets/images/paintings/snowy-scenery.png
-description: This is my first painting this winter!
+availability: Available
+image: assets/images/paintings/calm-lake.png
+description: "This is my a calm lake laid before a sunrise. "
 ---
