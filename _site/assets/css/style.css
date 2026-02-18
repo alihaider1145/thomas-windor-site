@@ -87,6 +87,10 @@ h6 {
   cursor: not-allowed;
 }
 
+.btn-back {
+  text-align: left;
+}
+
 .btn-secondary {
   border-radius: 1rem;
   border: none;
@@ -410,6 +414,12 @@ footer {
   margin-left: auto;
 }
 
+.painting-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 /* Gallery Page */
 
 /* about */
@@ -563,6 +573,11 @@ form button {
   }
 
   .painting-container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .painting-actions {
     flex-direction: column;
   }
 
