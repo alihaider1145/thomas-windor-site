@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
+site_url: https://your-site.netlify.app # ← update per client
+display_url: https://your-site.netlify.app # ← update per client
+
 media_folder: 'src/assets/images/paintings'
 public_folder: 'assets/images/paintings'
 
@@ -24,7 +27,18 @@ collections:
       - {
           label: 'Medium',
           name: 'medium',
-          widget: 'string',
+          widget: 'select',
+          options:
+            [
+              'Oil on canvas',
+              'Oil on board',
+              'Acrylic on canvas',
+              'Watercolour',
+              'Gouache',
+              'Pastel',
+              'Mixed media',
+              'Other',
+            ],
           default: 'Oil on canvas',
         }
       - {
@@ -32,6 +46,14 @@ collections:
           name: 'availability',
           widget: 'select',
           options: ['Available', 'Sold'],
+          default: 'Available',
         }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Description', name: 'description', widget: 'text' }
+      - {
+          label: 'Stripe Payment Link',
+          name: 'stripeLink',
+          widget: 'string',
+          required: false,
+          hint: 'Paste your Stripe Payment Link URL here (e.g. https://buy.stripe.com/...)',
+        }

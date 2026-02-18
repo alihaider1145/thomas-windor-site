@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Purchase Successful
+permalink: /success/
+---
+
+<div class="success page">
+    <h1 class="heading">🎉 Thank you for your purchase!</h1>
+    <p>Your payment was successful.</p>
+    <p>You'll receive a confirmation email from Stripe shortly with your receipt.</p>
+    <p>Your painting will be carefully packaged and shipped within {{ site.shippingTime }}.</p>
+    
+    <div>
+        <a href="/gallery/" class="btn-primary">Browse More Paintings</a>
+        <a href="/" class="btn-secondary">Return Home</a>
+    </div>
+</div>
+
+<!-- Pass site email to JavaScript FIRST -->
+<script>
+  window.ARTIST_EMAIL = '{{ site.email }}';
+  console.log('Artist email set to:', window.ARTIST_EMAIL); // Debug line
+</script>
+
+<!-- EmailJS library -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!-- Artist notification script (runs after email is set) -->
+<script src="/assets/js/email.js"></script>

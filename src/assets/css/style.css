@@ -82,6 +82,11 @@ h6 {
   transition: transform 0.3s ease;
 }
 
+.btn-primary.sold {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn-secondary {
   border-radius: 1rem;
   border: none;
@@ -96,13 +101,16 @@ h6 {
 
 a:hover,
 .btn-secondary:hover,
-.btn-primary:hover
-.social-link:hover {
+.btn-primary:hover .social-link:hover {
   transform: scale(1.1);
 }
 
 .section {
   padding: 4rem;
+}
+
+.page {
+  height: calc(100vh - 34rem);
 }
 
 /* header */
@@ -298,7 +306,6 @@ div.painting-grid > * {
   margin: 0 auto;
 }
 
-
 .card {
   background-color: var(--color-two);
   padding: 4rem 3rem;
@@ -341,7 +348,7 @@ div.painting-grid > * {
   height: 5rem;
 }
 
-.social-link{
+.social-link {
   transition: transform 0.3s ease;
 }
 
@@ -354,7 +361,9 @@ footer {
 
 /* individual painting cms template */
 .painting-container {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   margin: 4rem;
   gap: 2rem;
   justify-content: center;
@@ -404,6 +413,7 @@ footer {
 /* Gallery Page */
 
 /* about */
+
 .about-container {
   display: flex;
   justify-content: space-evenly;
@@ -448,10 +458,6 @@ footer {
 }
 
 /* contact */
-.contact {
-  height: calc(100vh - 34rem);
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -485,6 +491,37 @@ textarea {
 form button {
   width: fit-content;
   flex: 0;
+}
+
+/* Success */
+.success-page {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.success-page h1 {
+  margin-bottom: 20px;
+}
+
+.success-page p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  color: #333;
+}
+
+.success-page p:first-of-type {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.success-page > div {
+  margin-top: 40px;
+}
+
+.success-page .btn-secondary {
+  margin-left: 20px;
 }
 
 /* Mobile Responsiveness */
@@ -527,5 +564,15 @@ form button {
 
   .painting-container {
     flex-direction: column;
+  }
+
+  .success-page {
+    padding: 40px 15px;
+  }
+
+  .success-page .btn-secondary {
+    margin-left: 0;
+    margin-top: 15px;
+    display: inline-block;
   }
 }
